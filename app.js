@@ -16,9 +16,9 @@
 const express = require('express');
 
 const app = express();
-const account = ACCOUNT;
+const account = 'ACCOUNT';
 
-// [START hello_world]
+// [START hello_world]'
 // Say hello!
 app.get('/', (req, res) => {
   res.redirect(301, `https://googled.co/${account}`);
