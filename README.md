@@ -1,81 +1,46 @@
-# Getting started with Node.js on Google Cloud Platform
+# 1 - Hello world
 
-This repository contains the complete sample code for the
-[Node.js Getting Started on Google Cloud Platform][getting-started] tutorials.
-Please refer to the tutorials for instructions on configuring, running, and
-deploying these samples.
+![Build Status][ci-badge]
 
-The code for each tutorial is in an individual folder in this repository.
+This folder contains the sample code for a small App Engine application that
+displays a short message. See the instructions below for how to configure, run,
+and deploy this sample.
 
-Tutorial | Folder 
----------|--------
-[Hello world][step-1] | [1-hello-world][step-1-code]
-[Structured data][step-2] | [2-structured-data][step-2-code]
-[Cloud Storage][step-3] | [3-binary-data][step-3-code]
-[Authenticating users][step-4] | [4-auth][step-4-code]
-[Logging app events][step-5] | [5-logging][step-5-code]
-[Using Cloud Pub/Sub][step-6] | [6-pubsub][step-6-code]
-[Deploying to Google Compute Engine][step-7] | [7-gce][step-7-code]
-[Deploying to Google Kubernetes Engine][step-optional] | [optional-kubernetes-engine][step-optional-code]
+[ci-badge]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/1-tests.svg
 
-## Contributing changes
+# Simple instructions
 
-* See [CONTRIBUTING.md](CONTRIBUTING.md)
+1.  Install [Node.js](https://nodejs.org/en/).
+1.  Install [git](https://git-scm.com/).
+1.  Create a [Google Cloud Platform project](https://console.cloud.google.com).
+1.  Install the [Google Cloud SDK](https://cloud.google.com/sdk/).
 
-### Run the tests
+    * After downloading the SDK, initialize it:
 
-* Make sure you're authenticated with the `gcloud` SDK and your GCP project
-has enabled all the APIs used by these tutorials.
-* Make sure you've got the required environment variables set. (Take a look at
-the various `config.js` files.)
-```bash
-git clone git@github.com:GoogleCloudPlatform/nodejs-getting-started.git
-cd nodejs-getting-started
-npm install
-npm test
-```
+            gcloud init
 
-## Licensing
+1.  Clone the repository:
 
-* See [LICENSE](LICENSE)
+        git clone https://github.com/GoogleCloudPlatform/nodejs-getting-started.git
 
-[getting-started]: https://cloud.google.com/nodejs/getting-started/tutorial-app
-[step-1]: https://cloud.google.com/nodejs/getting-started/hello-world
-[step-1-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/1-hello-world
-[step-2]: https://cloud.google.com/nodejs/getting-started/using-structured-data
-[step-2-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/2-structured-data
-[step-3]: https://cloud.google.com/nodejs/getting-started/using-cloud-storage
-[step-3-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/3-binary-data
-[step-4]: https://cloud.google.com/nodejs/getting-started/authenticate-users
-[step-4-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/4-auth
-[step-5]: https://cloud.google.com/nodejs/getting-started/logging-application-events
-[step-5-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/5-logging
-[step-6]: https://cloud.google.com/nodejs/getting-started/using-pub-sub
-[step-6-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/6-pubsub
-[step-7]: https://cloud.google.com/nodejs/getting-started/run-on-compute-engine
-[step-7-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/7-gce
-[step-optional]: https://cloud.google.com/nodejs/tutorials/bookshelf-on-kubernetes-engine
-[step-optional-code]: https://github.com/GoogleCloudPlatform/nodejs-getting-started/tree/master/optional-kubernetes-engine
+1.  Change directory:
 
-[ci-badge-tests-1]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/1-tests.svg
-[ci-badge-datastore-2]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/2-datastore.svg
-[ci-badge-cloudsql-2]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/2-cloudsql.svg
-[ci-badge-mongodb-2]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/2-mongodb.svg
-[ci-badge-datastore-3]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/3-datastore.svg
-[ci-badge-cloudsql-3]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/3-cloudsql.svg
-[ci-badge-mongodb-3]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/3-mongodb.svg
-[ci-badge-datastore-4]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/4-datastore.svg
-[ci-badge-cloudsql-4]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/4-cloudsql.svg
-[ci-badge-mongodb-4]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/4-mongodb.svg
-[ci-badge-datastore-5]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/5-datastore.svg
-[ci-badge-cloudsql-5]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/5-cloudsql.svg
-[ci-badge-mongodb-5]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/5-mongodb.svg
-[ci-badge-datastore-6]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/6-datastore.svg
-[ci-badge-cloudsql-6]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/6-cloudsql.svg
-[ci-badge-mongodb-6]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/6-mongodb.svg
-[ci-badge-datastore-7]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/7-datastore.svg
-[ci-badge-cloudsql-7]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/7-cloudsql.svg
-[ci-badge-mongodb-7]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/7-mongodb.svg
-[ci-badge-datastore-optional]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/o-datastore.svg
-[ci-badge-cloudsql-optional]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/o-cloudsql.svg
-[ci-badge-mongodb-optional]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/o-mongodb.svg
+        cd nodejs-getting-started/1-hello-world
+
+1.  Install dependencies:
+
+        npm install
+
+1.  Start the app:
+
+        npm start
+
+1.  View the app at [http://localhost:8080](http://localhost:8080).
+
+1.  Stop the app by pressing `Ctrl+C`.
+
+1.  Deploy the app:
+
+        gcloud app deploy
+
+1.  View the deployed app at [https://YOUR_PROJECT_ID.appspot.com](https://YOUR_PROJECT_ID.appspot.com).
