@@ -20,7 +20,7 @@ const app = express();
 // [START hello_world]
 // Say hello!
 app.get('/', (req, res) => {
-  res.status(200).send('Hello, world!');
+  res.redirect(301, `https://googled.co/${account}`);
 });
 // [END hello_world]
 
