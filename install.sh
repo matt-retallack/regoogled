@@ -5,6 +5,7 @@ read account
 echo 'Configuring your account details...'
 sed -i "s/ACCOUNT/${account}/g" app.js
 echo 'Done.'
-echo 'Installing the app...'
+echo 'Deploying the app...'
 export PORT=8080 && npm install
-npm start
+gcloud app deploy
+echo 'All Done!'
