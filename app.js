@@ -16,6 +16,7 @@
 const express = require('express');
 
 const app = express();
+const account = ACCOUNT;
 
 // [START hello_world]
 // Say hello!
